@@ -1,0 +1,23 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: income; }
+.item4 { grid-area: expenses; }
+.item2 { grid-area: 1; }
+.item4 { grid-area: 2; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'income header'
+    'expenses header'
+    '1 2';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
