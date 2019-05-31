@@ -1,24 +1,64 @@
-
-
-
-<link rel="stylesheet" type="text/css" href="css.css">
-
-<!DOCTYPE html>
 <html>
-<head>
+	<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+	</head>
+	<body>
 
-</head>
-<body>
 
 
-<div class="grid-container">
-  <div class="item1">Header</div>
-  <div class="item2">income</div>
-  <div class="item3">expenses</div>
-  <div class="item4">kautkas</div>
-  <div class="item5">nz</div>
-  <div class="item6">gg</div>
-</div>
+      
+		<div class="container grid_layout">
+      <div class="top">
+        <div class="budget__title">Pieejamais budžets</div>
+        <div class="budget__total"><span id="budget__value">0</span>€</div>
+        <div class="budget__add">
 
-</body>
+
+          <select id="add_type">
+            <option value="income">+</option>
+            <option value="expense">-</option>
+          </select>
+
+
+          <input id="add_description" type="text" name="description" placeholder="Apraksts">
+          <input id="add_value" type="number" name="value" placeholder="summa">
+
+
+
+
+          <button class="button" onclick="addtolist()">Pievienot</button>
+
+
+
+
+        </div>
+      </div>
+
+			<div class="income left list">
+				<h1>Ienākumi</h1>
+				<div id="all_income" class="list__inner">
+          <!-- <div class="list_item"><div class="list_description">Alga</div><div class="list_value">+200€</div></div> -->
+				</div>
+				<div class="list__total">+<span class="total_income">0</span>€</div>
+			</div>
+
+			<div class="expenses right list">
+				<h1>Izdevumi</h1>
+				<div id="all_expenses" class="list__inner">
+            <!-- <div class="list_item"><div class="list_description">Ēdiens</div><div class="list_value">-100€</div></div> -->
+				</div>
+				<div class="list__total">-<span class="total_expenses">0</span>€</div>
+			</div>
+
+    </div>
+
+
+
+    <button id="gg" class="button" onclick="clearlocal()">Clear Local Storage</button>
+
+
+
+  </body>
+  <script src="mainJS.js"></script>
 </html>

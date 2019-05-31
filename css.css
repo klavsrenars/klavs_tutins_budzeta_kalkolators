@@ -1,25 +1,162 @@
-.item1 { grid-area: header; }
-.item2 { grid-area: income; }
-.item3 { grid-area: expenses; }
-.item4 { grid-area: kautkas; }
-.item5 { grid-area: nz; }
-.item6 { grid-area: gg; }
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'income header'
-    'expenses header'
-    'kautkas kautkas'
-    'nz gg';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+
+/* Nodefinē kontenera maksimālo platumu un ar margin: auto nocentre */
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+/* Pieškir izkārtojumu ar css grid, priekš desktop*/
+@media only screen and (min-width: 700px) {
+  .grid_layout {
+    display: grid;
+    grid-template-areas: 'top top' 'left right';
+    grid-gap: 10px;
+    padding: 15px;
+    grid-template-rows: 150px;
+    grid-auto-rows: 600px;
+  }
+}
+
+.top {
+  grid-area: top;
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
 }
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.container > div {
+  padding: 30px;
+  border: 1px blueviolet solid;
+}
+
+.container > div h1 {
+  margin-top: 0;
+}
+
+.budget__value {
+  padding-bottom: 30px;
+}
+
+.budget__total {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* styling for income and expeses list */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+}
+.list__inner {
+  flex-grow: 1;
+}
+
+.list__total {
+  align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gg {
+  margin-top: 30;
+  margin-left: 115;
+}
+
+
+
+.button {
+  background-color: blueviolet ;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 2px 1px;
+  cursor: pointer;
+}
+
+.button {border-radius: 12px;}
+
+
+
+#add_description  {
+
+
+  border: 1px blueviolet solid;
+  
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  margin: -2px -1px;
+  cursor: pointer;
+}
+
+
+#add_value {
+
+
+  border: 1px blueviolet solid;
+  
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  margin: -2px -1px;
+  cursor: pointer;
+}
+
+#add_description {border-radius: 12px;}
+#add_value {border-radius: 12px;}
+#add_type {border-radius: 12px;}
+
+#add_type  {
+  border:  1px blueviolet solid;
+  
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 10px;
+margin: -2px -1px;
+cursor: pointer;
+}
+
+
+
+
+/* 
+CSS UZDEVUMI
+Nostilot galvenes un saraksta elementus
+-"Pieejamais budžets" tekstam piešķirt stilu, kas labi iederas kopējā dizainā
+-Ievades laukiem piešķirt vizuāli pievilcīgu stilu (font-size, border, padding)
+-Nostilot pogas vizuāli pievilcīgi
+-Izcelt kopējo izdevumu un ienākumu izvadi
+-Ienākumu un izdevumu sarakstam piešķirt stilu, kas labāk nodala saraksta ierakstus vienu no otra
+
+*/
