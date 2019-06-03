@@ -1,6 +1,11 @@
 
 
+
+
+
+
 /* Nodefinē kontenera maksimālo platumu un ar margin: auto nocentre */
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -83,7 +88,7 @@
 
 #gg {
   margin-top: 30;
-  margin-left: 115;
+  margin-left: 450;
 }
 
 
@@ -145,6 +150,12 @@ display: inline-block;
 font-size: 10px;
 margin: -2px -1px;
 cursor: pointer;
+}
+
+
+#bu {
+  color: blueviolet;
+  
 }
 
 
